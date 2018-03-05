@@ -77,19 +77,70 @@ public class UnitaryTestsTest
          * 3- Manage the arguments to test;
          * 4- Manage the results;
          * 5- Test the method with the arguments;
-         * 6- 
+         * 6- Check results;
+         * 7- Restart from 3 if it will have the cases to test;
          */
+        System.out.println("-------------- add test ---------------");
+        //1 and 2
+        UnitaryTests addTests = new UnitaryTests();
         
+        //3 - Test two positives integers 
+        int a, b, result, expResult, count; String msg = "Test fail";
+        //4
+        a = 5; b = 5; expResult = a + b; count = 0;
+        //5
+        result = addTests.add(a, b); count++;
+        //6
+        if (result != expResult) { fail(msg + count); }
+        else { System.out.println("Test " + count + " ok."); }
         
-        System.out.println("add");
-        int a = 0;
-        int b = 0;
-        UnitaryTests instance = new UnitaryTests();
-        int expResult = 0;
-        int result = instance.add(a, b);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //3, 4 - Test a zero and b positive
+        a = 0; b = 5; expResult = a + b;
+        //5
+        result = addTests.add(a, b); count++;
+        //6
+        if (result != expResult) { fail(msg + count); }
+        else { System.out.println("Test " + count + " ok."); }
+        
+        //3, 4 - Test a positive and b zero
+        a = 5; b = 0; expResult = a + b;
+        //5
+        result = addTests.add(a, b); count++;
+        //6
+        if (result != expResult) { fail(msg + count); }
+        else { System.out.println("Test " + count + " ok."); }
+        
+        //3, 4 - Test a zero and b zero
+        a = 0; b = 0; expResult = a + b;
+        //5
+        result = addTests.add(a, b); count++;
+        //6
+        if (result != expResult) { fail(msg + count); }
+        else { System.out.println("Test " + count + " ok."); }
+        
+        //3, 4 - Test a positive and b negative
+        a = 5; b = -5; expResult = a + b;
+        //5
+        result = addTests.add(a, b); count++;
+        //6
+        if (result != expResult) { fail(msg + count); }
+        else { System.out.println("Test " + count + " ok."); }
+        
+        //3, 4 - Test a negative and b positive
+        a = -5; b = 5; expResult = a + b;
+        //5
+        result = addTests.add(a, b); count++;
+        //6
+        if (result != expResult) { fail(msg + count); }
+        else { System.out.println("Test " + count + " ok."); }
+        
+        //3, 4 - Test a negative and b negative
+        a = -5; b = -5; expResult = a + b;
+        //5
+        result = addTests.add(a, b); count++;
+        //6
+        if (result != expResult) { fail(msg + count); }
+        else { System.out.println("Test " + count + " ok."); }
     }
 
     /**
