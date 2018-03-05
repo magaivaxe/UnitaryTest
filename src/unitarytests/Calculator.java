@@ -6,8 +6,8 @@
 package unitarytests;
 
 /**
- * The interfaces create un type comme mouseListenner or others abstracts
- * classes. After implements the methods will be add automaticaly
+ * The interfaces create un supertype comme mouseListenner or others abstracts
+ * classes. After implements the methods will be add automaticaly as overrides
  * @author eleves
  */
 public interface Calculator

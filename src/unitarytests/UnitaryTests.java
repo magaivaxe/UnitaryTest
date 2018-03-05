@@ -26,12 +26,31 @@ public class UnitaryTests implements Calculator
         throw new UnsupportedOperationException("Not supported yet."); 
         //To change body of generated methods, choose Tools | Template
     }
-
+    /**
+     * Function that returns the divisiont between a/b
+     * @param a is the numerator
+     * @param b is the denominator 
+     * @return the an integer result 
+     */
     @Override
     public int divide(int a, int b)
     {
-        throw new UnsupportedOperationException("Not supported yet."); 
-        //To change body of generated methods, choose Tools | Templates.
+        //Exception to deminator value
+        if(b == 0){throw new ArithmeticException("It is impossible by zero");}
+        //variables
+        int res = 0; boolean resEstNegatif = false;
+        //Negativities conditions
+        if (a < 0 || b < 0) { resEstNegatif = true;}
+        if (a < 0 && b < 0) { resEstNegatif = false;}
+        //Division by substraction and count
+        while (a > 0)
+        {            
+            a = substract(a, b);
+            res++;
+        }
+        //Negative result condition
+        if (resEstNegatif) {res = -res;}
+        return res;
     }
     /**
      * To according the exemple I haven't the right to use the fast methods
@@ -56,12 +75,27 @@ public class UnitaryTests implements Calculator
         }
         return res;
     }
-
+    /**
+     * Programm this function yet!!!
+     * @param a
+     * @param b
+     * @return 
+     */
     @Override
     public int substract(int a, int b)
     {
-        throw new UnsupportedOperationException("Not supported yet."); 
-        //To change body of generated methods, choose Tools | Templates.
+        int res = a;
+        //Incremantation of b value on a
+        if (b > 0)
+        {
+            while (b-- != 0) { res++; }
+        }
+        //Decremantaion of a value on b
+        else if (b < 0)
+        {
+            while (b++ != 0){ res--; }
+        }
+        return res;
     }
     
 }

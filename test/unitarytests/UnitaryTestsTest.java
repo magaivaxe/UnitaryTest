@@ -84,7 +84,7 @@ public class UnitaryTestsTest
         //1 and 2
         UnitaryTests addTests = new UnitaryTests();
         
-        //3 - Test two positives integers 
+        //3 - Test two positives integers ----------------------------------
         int a, b, result, expResult, count; String msg = "Test fail";
         //4
         a = 5; b = 5; expResult = a + b; count = 0;
@@ -94,7 +94,7 @@ public class UnitaryTestsTest
         if (result != expResult) { fail(msg + count); }
         else { System.out.println("Test " + count + " ok."); }
         
-        //3, 4 - Test a zero and b positive
+        //3, 4 - Test a zero and b positive ----------------------------------
         a = 0; b = 5; expResult = a + b;
         //5
         result = addTests.add(a, b); count++;
@@ -102,7 +102,7 @@ public class UnitaryTestsTest
         if (result != expResult) { fail(msg + count); }
         else { System.out.println("Test " + count + " ok."); }
         
-        //3, 4 - Test a positive and b zero
+        //3, 4 - Test a positive and b zero ----------------------------------
         a = 5; b = 0; expResult = a + b;
         //5
         result = addTests.add(a, b); count++;
@@ -110,7 +110,7 @@ public class UnitaryTestsTest
         if (result != expResult) { fail(msg + count); }
         else { System.out.println("Test " + count + " ok."); }
         
-        //3, 4 - Test a zero and b zero
+        //3, 4 - Test a zero and b zero ----------------------------------
         a = 0; b = 0; expResult = a + b;
         //5
         result = addTests.add(a, b); count++;
@@ -118,7 +118,7 @@ public class UnitaryTestsTest
         if (result != expResult) { fail(msg + count); }
         else { System.out.println("Test " + count + " ok."); }
         
-        //3, 4 - Test a positive and b negative
+        //3, 4 - Test a positive and b negative --------------------------------
         a = 5; b = -5; expResult = a + b;
         //5
         result = addTests.add(a, b); count++;
@@ -126,7 +126,7 @@ public class UnitaryTestsTest
         if (result != expResult) { fail(msg + count); }
         else { System.out.println("Test " + count + " ok."); }
         
-        //3, 4 - Test a negative and b positive
+        //3, 4 - Test a negative and b positive --------------------------------
         a = -5; b = 5; expResult = a + b;
         //5
         result = addTests.add(a, b); count++;
@@ -134,7 +134,7 @@ public class UnitaryTestsTest
         if (result != expResult) { fail(msg + count); }
         else { System.out.println("Test " + count + " ok."); }
         
-        //3, 4 - Test a negative and b negative
+        //3, 4 - Test a negative and b negative --------------------------------
         a = -5; b = -5; expResult = a + b;
         //5
         result = addTests.add(a, b); count++;
