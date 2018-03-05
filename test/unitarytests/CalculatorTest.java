@@ -5,6 +5,10 @@
  */
 package unitarytests;
 
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -12,27 +16,35 @@ import static org.junit.Assert.*;
  *
  * @author eleves
  */
-public class UnitaryTestsTest
+public class CalculatorTest
 {
     
-    public UnitaryTestsTest()
+    public CalculatorTest()
     {
     }
-    /**
-     * Test of main method, of class UnitaryTests.
-     */
-    @Test
-    public void testMain()
+    
+    @BeforeClass
+    public static void setUpClass()
     {
-        System.out.println("main");
-        String[] args = null;
-        UnitaryTests.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+    
+    @AfterClass
+    public static void tearDownClass()
+    {
+    }
+    
+    @Before
+    public void setUp()
+    {
+    }
+    
+    @After
+    public void tearDown()
+    {
     }
 
     /**
-     * Test of multiply method, of class UnitaryTests.
+     * Test of multiply method, of class Calculator.
      */
     @Test
     public void testMultiply()
@@ -40,7 +52,7 @@ public class UnitaryTestsTest
         System.out.println("multiply");
         int a = 0;
         int b = 0;
-        UnitaryTests instance = new UnitaryTests();
+        Calculator instance = new CalculatorImpl();
         int expResult = 0;
         int result = instance.multiply(a, b);
         assertEquals(expResult, result);
@@ -49,7 +61,7 @@ public class UnitaryTestsTest
     }
 
     /**
-     * Test of divide method, of class UnitaryTests.
+     * Test of divide method, of class Calculator.
      */
     @Test
     public void testDivide()
@@ -57,7 +69,7 @@ public class UnitaryTestsTest
         System.out.println("divide");
         int a = 0;
         int b = 0;
-        UnitaryTests instance = new UnitaryTests();
+        Calculator instance = new CalculatorImpl();
         int expResult = 0;
         int result = instance.divide(a, b);
         assertEquals(expResult, result);
@@ -66,7 +78,7 @@ public class UnitaryTestsTest
     }
 
     /**
-     * Test of add method, of class UnitaryTests.
+     * Test of add method, of class Calculator.
      */
     @Test
     public void testAdd()
@@ -74,7 +86,7 @@ public class UnitaryTestsTest
         System.out.println("add");
         int a = 0;
         int b = 0;
-        UnitaryTests instance = new UnitaryTests();
+        Calculator instance = new CalculatorImpl();
         int expResult = 0;
         int result = instance.add(a, b);
         assertEquals(expResult, result);
@@ -83,7 +95,7 @@ public class UnitaryTestsTest
     }
 
     /**
-     * Test of substract method, of class UnitaryTests.
+     * Test of substract method, of class Calculator.
      */
     @Test
     public void testSubstract()
@@ -91,12 +103,36 @@ public class UnitaryTestsTest
         System.out.println("substract");
         int a = 0;
         int b = 0;
-        UnitaryTests instance = new UnitaryTests();
+        Calculator instance = new CalculatorImpl();
         int expResult = 0;
         int result = instance.substract(a, b);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
+    }
+
+    public class CalculatorImpl implements Calculator
+    {
+
+        public int multiply(int a, int b)
+        {
+            return 0;
+        }
+
+        public int divide(int a, int b)
+        {
+            return 0;
+        }
+
+        public int add(int a, int b)
+        {
+            return 0;
+        }
+
+        public int substract(int a, int b)
+        {
+            return 0;
+        }
     }
     
 }

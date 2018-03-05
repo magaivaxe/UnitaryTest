@@ -6,7 +6,7 @@
 package unitarytests;
 
 /**
- *
+ * The override methods come from the interface that I build.
  * @author eleves
  */
 public class UnitaryTests implements Calculator
@@ -23,7 +23,7 @@ public class UnitaryTests implements Calculator
     @Override
     public int multiply(int a, int b)
     {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Template
     }
 
     @Override
