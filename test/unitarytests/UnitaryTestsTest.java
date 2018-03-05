@@ -71,6 +71,16 @@ public class UnitaryTestsTest
     @Test
     public void testAdd()
     {
+        /**
+         * 1- Instance the class to test;
+         * 2- Initializer the object;
+         * 3- Manage the arguments to test;
+         * 4- Manage the results;
+         * 5- Test the method with the arguments;
+         * 6- 
+         */
+        
+        
         System.out.println("add");
         int a = 0;
         int b = 0;
