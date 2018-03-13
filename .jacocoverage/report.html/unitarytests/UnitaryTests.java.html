@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>UnitaryTests.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;UnitaryTests&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">unitarytests</a> &gt; <span class="el_source">UnitaryTests.java</span></div><h1>UnitaryTests.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package unitarytests;
+
+/**
+ * The override methods come from the interface that I build.
+ * @author eleves
+ */
+<span class="fc" id="L12">public class UnitaryTests implements Calculator</span>
+{
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args)
+    {
+        // TODO code application logic here
+<span class="nc" id="L21">    }</span>
+    /**
+     * 
+     * @param a integer to multiply
+     * @param b integer to multuply
+     * @return the number multiplyed
+     */
+    @Override
+    public int multiply(int a, int b)
+    {
+<span class="fc" id="L31">        return a * b;</span>
+    }
+    /**
+     * Function that returns the divisiont between a/b
+     * @param a is the numerator
+     * @param b is the denominator 
+     * @return the an integer result 
+     */
+    @Override
+    public int divide(int a, int b)
+    {
+        //Exception to deminator value
+<span class="fc bfc" id="L43" title="All 2 branches covered.">        if(b == 0){throw new ArithmeticException(&quot;It is impossible by zero&quot;);}</span>
+        //variables
+<span class="fc" id="L45">        int res = 0; boolean resEstNegatif = false;</span>
+        //Negativities conditions
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (a &lt; 0)</span>
+        {
+<span class="pc bpc" id="L49" title="1 of 2 branches missed.">            resEstNegatif = !resEstNegatif;</span>
+<span class="fc" id="L50">            a = -a;</span>
+        }
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        if (b &lt; 0)</span>
+        {
+<span class="fc bfc" id="L54" title="All 2 branches covered.">            resEstNegatif = !resEstNegatif;</span>
+<span class="fc" id="L55">            b = -b;</span>
+        }
+        //Division by substraction and count
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        while (a &gt; 0)</span>
+        {            
+<span class="fc" id="L60">            a = substract(a, b);</span>
+<span class="fc" id="L61">            res++;</span>
+        }
+        //Negative result condition
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (resEstNegatif) {res = -res;}</span>
+<span class="fc" id="L65">        return res;</span>
+    }
+    /**
+     * To according the exemple I haven't the right to use the fast methods
+     * Also I will use the loop to add, substract, divise and multiply
+     * @param a value to add to b
+     * @param b value to add to a 
+     * @return the value res
+     */
+    @Override
+    public int add(int a, int b)
+    {
+<span class="fc" id="L77">        int res = a;</span>
+        //Incremantation of b value on a
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (b &gt; 0)</span>
+        {
+<span class="fc bfc" id="L81" title="All 2 branches covered.">            while (b-- != 0) { res++; }</span>
+        }
+        //Decremantaion of a value on b
+<span class="fc bfc" id="L84" title="All 2 branches covered.">        else if (b &lt; 0)</span>
+        {
+<span class="fc bfc" id="L86" title="All 2 branches covered.">            while (b++ != 0){ res--; }</span>
+        }
+<span class="fc" id="L88">        return res;</span>
+    }
+    /**
+     * Programm this function yet!!!
+     * @param a
+     * @param b
+     * @return 
+     */
+    @Override
+    public int substract(int a, int b)
+    {
+<span class="fc" id="L99">        return a - b;</span>
+    }
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
