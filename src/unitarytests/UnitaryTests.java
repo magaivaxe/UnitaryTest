@@ -19,12 +19,16 @@ public class UnitaryTests implements Calculator
     {
         // TODO code application logic here
     }
-
+    /**
+     * 
+     * @param a integer to multiply
+     * @param b integer to multuply
+     * @return the number multiplyed
+     */
     @Override
     public int multiply(int a, int b)
     {
-        throw new UnsupportedOperationException("Not supported yet."); 
-        //To change body of generated methods, choose Tools | Template
+        return a * b;
     }
     /**
      * Function that returns the divisiont between a/b
@@ -40,8 +44,16 @@ public class UnitaryTests implements Calculator
         //variables
         int res = 0; boolean resEstNegatif = false;
         //Negativities conditions
-        if (a < 0 || b < 0) { resEstNegatif = true;}
-        if (a < 0 && b < 0) { resEstNegatif = false;}
+        if (a < 0)
+        {
+            resEstNegatif = !resEstNegatif;
+            a = -a;
+        }
+        if (b < 0)
+        {
+            resEstNegatif = !resEstNegatif;
+            b = -b;
+        }
         //Division by substraction and count
         while (a > 0)
         {            
@@ -84,18 +96,7 @@ public class UnitaryTests implements Calculator
     @Override
     public int substract(int a, int b)
     {
-        int res = a;
-        //Incremantation of b value on a
-        if (b > 0)
-        {
-            while (b-- != 0) { res++; }
-        }
-        //Decremantaion of a value on b
-        else if (b < 0)
-        {
-            while (b++ != 0){ res--; }
-        }
-        return res;
+        return a - b;
     }
     
 }
